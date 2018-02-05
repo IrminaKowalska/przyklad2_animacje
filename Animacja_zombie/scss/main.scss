@@ -1,0 +1,26 @@
+$width: 200px;
+$height: 312px;
+
+.zombie {
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-image: url('../walkingdead.png');
+  background-position: 0px 0px;
+  animation: move 7s infinite ease-in-out, walk 1s steps(10) infinite;
+}
+
+@keyframes walk {
+  100% {
+    background-position: -2000px;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: -250px
+  }
+  100% {
+    left: 1250px;
+  }
+}
